@@ -1,1 +1,0 @@
-# karmayxzu.github.io
