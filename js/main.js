@@ -195,7 +195,7 @@ const tooltips = {
     "Library": "Stores a collection of books, each containing vast amounts of information from basic life skills to complex magic spells.",
 }
 
-const units = ["", "k", "M", "B", "T", "q", "Q", "Sx", "Sp", "Oc", "N", "Dc", "Un", "Duo", "Tre", "Qua", "Qui"];
+const units = ["", "k", "M", "B", "T", "q", "Q", "Sx", "Sp", "Oc", "N", "Dc", "Un", "Duo", "Tre", "Qua", "Qui", "Sxd", "Spd", "Ocd", "Nod", "Vg", "Uvg", "Dvg", "Tvg", "Qavg", "Qivg", "Sxvg", "Spvg", "Ocvg", "Nvg"];
 
 const jobTabButton = document.getElementById("jobTabButton")
 
