@@ -13,6 +13,15 @@
   }
   </style>
 </head>
+  <script>
+  function initFreshChat() {
+    window.fcWidget.init({
+      token: "439927af-e7a2-47c5-9403-c83ed31028ff",
+      host: "https://wchat.freshchat.com"
+    });
+  }
+  function initialize(i,t){var e;i.getElementById(t)?initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,e.src="https://wchat.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}function initiateCall(){initialize(document,"Freshdesk Messaging-js-sdk")}window.addEventListener?window.addEventListener("load",initiateCall,!1):window.attachEvent("load",initiateCall,!1);
+</script>
 <body>
 
 <div class="p-5 bg-primary text-white text-center">
@@ -26,13 +35,10 @@
         <a class="nav-link active" href="#">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="cookieclicker.html">Cookie Clicker</a>
+        <a class="nav-link disabled" href="cookieclicker.html">Cookie Clicker (broken)</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="HackedKnight.html">Hacked Knight</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="tbag.html">TBAG</a>
       </li>
     </ul>
   </div>
@@ -42,7 +48,6 @@
   <div class="row">
     <div class="col-sm-4">
       <h2 class="mt-4">My Games</h2>
-      <p>Lorem ipsum dolor sit ame.</p>
       <ul class="nav nav-pills flex-column">
         <li class="nav-item">
           <a class="nav-link active" href="#">Home</a>
@@ -53,24 +58,14 @@
         <li class="nav-item">
           <a class="nav-link" href="HackedKnight.html">Hacked Knight</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="tbag.html">Hacked Knight</a>
-        </li>
       </ul>
       <hr class="d-sm-none">
     </div>
     <div class="col-sm-8">
       <h2>Cookie Clicker Released</h2>
-      <h5>April 30, 2022</h5>
+      <h5>May 1, 2022</h5>
       <p>Cookie clicker is on this website and playable during school!</p>
       <p>Warning: Remember to save your game!</p>
-      
-      <br><br>
-      
-      <h2>TBAG Game</h2>
-      <h5>May 1, 2022</h5>
-      <p>This is a new game I made with Python. I found this in my archives and decided to put it here!</p>
-      <p>This game is currently in beta.</p>
     </div>
   </div>
 </div>
