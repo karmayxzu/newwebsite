@@ -1,45 +1,38 @@
-# cookieclicker
+# 2048
+A small clone of [1024](https://play.google.com/store/apps/details?id=com.veewo.a1024), based on [Saming's 2048](http://saming.fr/p/2048/) (also a clone).
 
-<img src="img/perfectCookie.png" width="128">
+Made just for fun. [Play it here!](http://gabrielecirulli.github.io/2048/)
 
-The original game can be found at http://orteil.dashnet.org/cookieclicker/
+The official app can also be found on the [Play Store](https://play.google.com/store/apps/details?id=com.gabrielecirulli.app2048) and [App Store!](https://itunes.apple.com/us/app/2048-by-gabriele-cirulli/id868076805)
 
-This mirror for, errrr, like, educational purpose, either to download for your own offline education or to be played online from http://ozh.github.io/cookieclicker/ if you cannot "educate" yourself on the original URL
+### Contributions
 
-### How to update
+[Anna Harren](https://github.com/iirelu/) and [sigod](https://github.com/sigod) are maintainers for this repository.
 
-If the original game updates, here is how you can update the mirror:
+Other notable contributors:
 
-#### 1. Fetch all new images :
+ - [TimPetricola](https://github.com/TimPetricola) added best score storage
+ - [chrisprice](https://github.com/chrisprice) added custom code for swipe handling on mobile
+ - [marcingajda](https://github.com/marcingajda) made swipes work on Windows Phone
+ - [mgarciaisaia](https://github.com/mgarciaisaia) added support for Android 2.3
 
-From the root,
+Many thanks to [rayhaanj](https://github.com/rayhaanj), [Mechazawa](https://github.com/Mechazawa), [grant](https://github.com/grant), [remram44](https://github.com/remram44) and [ghoullier](https://github.com/ghoullier) for the many other good contributions.
 
-* `cd img/`
-* `wget --convert-links -O index.html http://orteil.dashnet.org/cookieclicker/img/`
-* `grep -v PARENTDIR index.html | grep -o '<a href=".*">' | sed 's/<a href="//' | sed 's/">//' > list.txt`
-* `wget -N -i list.txt -B http://orteil.dashnet.org/cookieclicker/img/`
+### Screenshot
 
-#### 2. Fetch all new sounds :
+<p align="center">
+  <img src="https://cloud.githubusercontent.com/assets/1175750/8614312/280e5dc2-26f1-11e5-9f1f-5891c3ca8b26.png" alt="Screenshot"/>
+</p>
 
-Similarly :
+That screenshot is fake, by the way. I never reached 2048 :smile:
 
-* `cd snd/`
-* `wget --convert-links -O index.html http://orteil.dashnet.org/cookieclicker/snd/`
-* `grep -v PARENTDIR index.html | grep -o '<a href=".*">' | sed 's/<a href="//' | sed 's/">//' > list.txt`
-* `wget -N -i list.txt -B http://orteil.dashnet.org/cookieclicker/snd/`
+## Contributing
+Changes and improvements are more than welcome! Feel free to fork and open a pull request. Please make your changes in a specific branch and request to pull into `master`! If you can, please make sure the game fully works before sending the PR, as that will help speed up the process.
 
-#### 3. Update `js` and `html` files :
+You can find the same information in the [contributing guide.](https://github.com/gabrielecirulli/2048/blob/master/CONTRIBUTING.md)
 
-From the root directory :
+## License
+2048 is licensed under the [MIT license.](https://github.com/gabrielecirulli/2048/blob/master/LICENSE.txt)
 
-* Fetch the updated `index.html` file: `wget -O index.html http://orteil.dashnet.org/cookieclicker/` 
-* Fetch the updated `style.css` file: `wget -O style.css http://orteil.dashnet.org/cookieclicker/style.css`
-* Fetch updated `js` files : `wget -N -i list.txt -B http://orteil.dashnet.org/cookieclicker/`
-* Scan `index.html` for any new `<script src` and also `main.js` for any new local javascript (eg `Game.last.minigameUrl`)
-* In `main.js` there is a call to a remote script we need to modify:
-  * Look for `ajax('/patreon/grab.php'` and replace it with `ajax('grab.txt'`
-  * In the root: `wget -O grab.txt http://orteil.dashnet.org/patreon/grab.php`
-
-#### 4. Report update here :)
-
-If you happen to update, please make a pull request for others to benefit, thanks!
+## Donations
+I made this in my spare time, and it's hosted on GitHub (which means I don't have any hosting costs), but if you enjoyed the game and feel like buying me coffee, you can donate at my BTC address: `1Ec6onfsQmoP9kkL3zkpB6c5sA4PVcXU2i`. Thank you very much!
