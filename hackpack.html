@@ -1,24 +1,129 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+  <title>Hackpacks</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Hack Pack</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    html {
+        scroll-behavior: smooth;
+        overflow-y: scroll;
+    }
+    .fakeimg {
+        height: 200px;
+        background: #aaa;
+    }
+
+    .accordion {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+        }
+
+        .active, .accordion:hover {
+        background-color: #ccc;
+        }
+
+        .accordion:after {
+        content: '\002B';
+        color: #777;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+        }
+
+        .active:after {
+        content: "\2212";
+        }
+
+        .panel {
+        padding: 0 18px;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        }
+        #footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 80px;   /* Height of the footer */
+            background: #6cf;
+        }
+  </style>
 </head>
-
 <body>
-  <h1>Prodigy Hack Pack</h1>
-  <h2>How to use</h2>
-  To use this hack pack, make a new bookmark (Ctrl+Shift+B to open bookmark bar)
-  then name it whatever you want, and then copy the hack code. Type in "javascript:"
-  and then paste in the hack. Open prodigy and click your bookmark!
-  <h2>Download</h2>
-  <a href="/Prodigy Hack Pack.zip" download>
-  <p>Download hack pack</p>
-  </a>
-  
-  <h6>P.S. I didn't have a lot of time to make this page</h6>
-</body>
 
+<div class="p-5 bg-primary text-white text-center">
+  <h1>Hackpack Documentation and Downloads</h1>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-10">
+        <h2>Hackpacks</h2>
+        <p>Click the image to download!</p>
+        <p>Note: All hackpacks are JavaScript bookmarklets.</p>
+        <button class="accordion">Prodigy Hack Pack</button>
+        <div class="panel">
+            <p>Tired of paying for membership? Have fussbudget parents that won't buy you membership? Too lazy to grind or want old items? No fear! Use this Prodigy Hack Pack to solve it all!</p>
+            <a href="/Prodigy Hack Pack.zip" download>
+                <img src="/prodigyhaxlogo.png" alt="Prodigy Hax">
+            </a>
+        </div>
+        <br>
+
+        <button class="accordion">BlooketUI Pack</button>
+        <div class="panel">
+            <p>You know Blooket? The insanely hackable remix of Kahoot... Well, here's a good hackpack for it! Easy to auto-grind, has tons of hacks, just don't get banned!</p>
+            <a href="/blooketui-pack.zip" download>
+                <img src="/blooketui.png" alt="Blooket Hax">
+            </a>
+        </div>
+        <br>
+
+        <button class="accordion">BlooketUI Pack (Stealth Version)</button>
+        <div class="panel">
+            <p>So, you were playing Blooket in class with the hacks. You use the get all answers correct hack and bam! The questions and answers change, and then your teacher kicks you out! This pack has a new version of the answer hack.</p>
+            <a href="/blooketui-pack-stealth.zip" download>
+                <img src="/blooketui.png" alt="Blooket Hax">
+            </a>
+        </div>
+
+        <br><br><br><br><br>
+        
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            
+            for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+                } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+            });
+            }
+        </script>
+    </div>
+  </div>
+</div>
+
+<div id="footer" class="mt-5 p-4 bg-dark text-white text-center">
+  <p>All Hackpacks are completely open source.</p>
+</div>
+
+</body>
 </html>
